@@ -326,6 +326,8 @@ extract_random_effects(gpa_mixed) %>%
   kable_df(align = 'r')
 ```
 
+This shows the deviation of each student from the "grand intercept", that is, what we called $\mathrm{effect}_{\mathrm{student}}$.
+
 ```{r randints, eval=FALSE}
 coef(gpa_mixed)$student %>% head(5)
 ```
@@ -336,6 +338,7 @@ extract_random_coefs(gpa_mixed) %>%
   kable_df(align = 'rr')
 ```
 
+This shows the overall intercept for each student, that is, what we called $b_{\mathrm{int\_student}}$.
 
 Note that we did not allow occasion to vary, so it is a constant, i.e. *fixed*, effect for all students. 
 
